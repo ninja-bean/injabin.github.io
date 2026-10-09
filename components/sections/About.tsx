@@ -31,12 +31,11 @@ export const About: React.FC = () => {
             <div className="md:col-span-5 space-y-6">
               <div className="relative border-4 border-ink bg-paper aspect-square overflow-hidden group">
                 <Image
-                  src="/avatar.png"
+                  src="/avatar.webp"
                   alt="Injabin Alam"
                   fill
                   className="object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-300 ease-mechanical"
                   sizes="(max-width: 768px) 100vw, 400px"
-                  priority
                 />
                 {/* Bauhaus Corner Accent */}
                 <div className="absolute bottom-0 right-0 w-8 h-8 bg-blue border-t-2 border-l-2 border-ink" />

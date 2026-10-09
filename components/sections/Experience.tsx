@@ -4,6 +4,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { experiences } from '@/content';
 import { useAppStore } from '@/lib/store';
+import { InView } from '@/components/ui/InView';
 
 const ExperienceSlabsCanvas = dynamic(
   () => import('@/components/scene/ExperienceSlabsCanvas'),
@@ -42,7 +43,15 @@ export const Experience: React.FC = () => {
         </div>
 
         {/* 3D Isometric Duration Slabs Canvas */}
-        <ExperienceSlabsCanvas />
+        <InView
+          fallback={
+            <div className="w-full h-[260px] sm:h-[300px] lg:h-[340px] mb-10 border-2 border-ink bg-paper/40 flex items-center justify-center font-mono text-xs text-grey">
+              Loading 3D Experience Slabs...
+            </div>
+          }
+        >
+          <ExperienceSlabsCanvas />
+        </InView>
 
         {/* Timeline Stack Slabs */}
         <div className="space-y-6">

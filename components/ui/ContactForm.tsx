@@ -74,9 +74,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     return () => clearInterval(timer);
   }, [cooldown]);
 
-  // Load hCaptcha script per Web3Forms instructions
+  // Load hCaptcha script per Web3Forms instructions, but only once the
+  // contact section is reached so it never blocks the initial page load.
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (!hasEntered || typeof window === 'undefined') return;
     const existingScript = document.querySelector('script[src*="hcaptcha.com"]');
     if (!existingScript) {
       const script = document.createElement('script');
@@ -85,7 +86,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       script.defer = true;
       document.body.appendChild(script);
     }
-  }, []);
+  }, [hasEntered]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import { projects } from '@/content';
 import { ProjectDetail } from './ProjectDetail';
 import { useAppStore } from '@/lib/store';
+import { InView } from '@/components/ui/InView';
 
 // Lazy-load ProjectPlinthsCanvas with ssr: false
 const ProjectPlinthsCanvas = dynamic(() => import('@/components/scene/ProjectPlinthsCanvas'), {
@@ -52,7 +53,15 @@ export const Projects: React.FC = () => {
         </div>
 
         {/* 3D Isometric Metaphor Plinths Gallery */}
-        <ProjectPlinthsCanvas />
+        <InView
+          fallback={
+            <div className="w-full h-[280px] sm:h-[320px] lg:h-[360px] mb-8 border-2 border-ink bg-paper/40 flex items-center justify-center font-mono text-xs text-grey">
+              Loading 3D Project Plinths...
+            </div>
+          }
+        >
+          <ProjectPlinthsCanvas />
+        </InView>
 
         {/* 12-Column Grid of 6 Projects */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">

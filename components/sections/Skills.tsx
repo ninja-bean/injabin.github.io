@@ -4,6 +4,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import { skillGroups } from '@/content';
 import { useAppStore } from '@/lib/store';
+import { InView } from '@/components/ui/InView';
 
 const SkillBlocksCanvas = dynamic(
   () => import('@/components/scene/SkillBlocksCanvas'),
@@ -42,7 +43,15 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* 3D Exploded Axonometric Skill Blocks */}
-        <SkillBlocksCanvas />
+        <InView
+          fallback={
+            <div className="w-full h-[280px] sm:h-[320px] lg:h-[360px] mb-10 border-2 border-ink bg-paper/40 flex items-center justify-center font-mono text-xs text-grey">
+              Loading 3D Skill Explosion...
+            </div>
+          }
+        >
+          <SkillBlocksCanvas />
+        </InView>
 
         {/* 12-Column Grid: 4 Disciplines */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

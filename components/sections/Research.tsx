@@ -3,6 +3,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { certifications } from '@/content/certifications';
+import { InView } from '@/components/ui/InView';
 
 const ResearchTetrahedronCanvas = dynamic(
   () => import('@/components/scene/ResearchTetrahedronCanvas'),
@@ -44,7 +45,16 @@ export const Research: React.FC = () => {
             </div>
           </div>
 
-          <ResearchTetrahedronCanvas />
+          <InView
+            className="shrink-0"
+            fallback={
+              <div className="w-full sm:w-[260px] h-[220px] sm:h-[260px] border-2 border-ink bg-paper/40 flex items-center justify-center font-mono text-xs text-grey">
+                Loading 3D Tetrahedron...
+              </div>
+            }
+          >
+            <ResearchTetrahedronCanvas />
+          </InView>
         </div>
 
         {/* 6-Card Bauhaus Grid */}
