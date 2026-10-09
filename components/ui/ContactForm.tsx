@@ -175,14 +175,21 @@ export const ContactForm: React.FC<ContactFormProps> = ({
         payload['h-captcha-response'] = hCaptchaResponse;
       }
 
-      // If no API key is configured yet in local development, provide a graceful test response
+      // In development, simulate a send when no key is configured so the UI can be
+      // exercised. In production, surface a clear error instead of silently faking
+      // success, so a missing key never looks like a delivered message.
       if (!apiKey || apiKey === 'your_access_key_here') {
-        await new Promise((resolve) => setTimeout(resolve, 800));
-        setSubmittedData({ name: formData.name, email: formData.email });
-        setStatus('sent');
-        setContactSent(true);
-        setCooldown(60);
-        setFormData({ name: '', email: '', message: '', botcheck: '' });
+        if (process.env.NODE_ENV === 'development') {
+          await new Promise((resolve) => setTimeout(resolve, 800));
+          setSubmittedData({ name: formData.name, email: formData.email });
+          setStatus('sent');
+          setContactSent(true);
+          setCooldown(60);
+          setFormData({ name: '', email: '', message: '', botcheck: '' });
+          return;
+        }
+        setStatus('error');
+        setErrorMessage('Messaging is not configured yet. Please email me directly.');
         return;
       }
 
