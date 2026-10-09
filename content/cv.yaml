@@ -1,0 +1,183 @@
+name: Injabin Alam
+title: Software Engineer | Full-Stack & Systems Developer
+location: Dhaka, Bangladesh
+email: injabin29@gmail.com
+phone: "+880 1XXXXXXXXX" # Available upon request
+links:
+  portfolio: https://injabin.github.io
+  github: https://github.com/ninja-bean
+  linkedin: https://linkedin.com/in/injabin
+  hackerrank: https://www.hackerrank.com/profile/malam2330344
+
+summary: >
+  Results-driven Software Engineer with extensive practical experience in full-stack web engineering,
+  distributed backend services, real-time telemetry pipelines, and algorithmic problem solving.
+  Proven track record leading agile software development sprints as Scrum Master, building 3D WebGL applications,
+  and delivering award-winning IoT/embedded systems. Passionate about engineering high-performance,
+  maintainable, and reliable software for the industry software and IT sector.
+
+skills:
+  languages:
+    - TypeScript
+    - JavaScript (ES6+)
+    - Java
+    - C++
+    - Python
+    - PHP
+    - SQL
+    - HTML5/CSS3
+  frameworks_libraries:
+    - Next.js (App Router)
+    - React
+    - Node.js
+    - Three.js / WebGL
+    - Zustand
+    - Tailwind CSS
+    - Express.js
+    - JDBC / Swing
+  databases_devops:
+    - MySQL
+    - PostgreSQL
+    - Git & GitHub
+    - RESTful APIs
+    - WebSockets & MQTT
+    - Vercel Deployment
+  engineering_practices:
+    - Agile / Scrum (Certified)
+    - Data Structures & Algorithms (5-Star HackerRank)
+    - Object-Oriented Architecture (OOP / OOD)
+    - System Design & Modular Architecture
+    - CI/CD & Code Reviews
+
+experience:
+  - role: AI Data Contributor (Technical Evaluator)
+    organization: Outlier
+    location: Remote
+    period: Sep 2026 – Present
+    highlights:
+      - Evaluated and benchmarked complex visual, multilingual, and programmatic code outputs for cutting-edge LLMs against strict quality guidelines.
+      - Conducted systematic code reviews, defect triage, and prompt quality validation to enhance generative AI response precision and reliability.
+      - Maintained high evaluation throughput under dynamic specifications, providing rigorous feedback on algorithmic correctness.
+
+  - role: Engineering Intern (Airframe & CAD)
+    organization: UIU CanSat Team
+    location: Dhaka, Bangladesh
+    period: Aug 2025 – Aug 2026
+    highlights:
+      - Engineered complete parametric 3D CAD assemblies in Autodesk Fusion 360 for an autonomous fixed-wing VTOL drone.
+      - Researched aviation mechanics and aerodynamic airflow properties around the NACA 4412 airfoil to optimize low-speed transition lift.
+      - Collaborated with multidisciplinary hardware and avionics teams to translate conceptual designs into physically manufacturable components.
+
+  - role: General Member & Technical Contributor
+    organization: UIU App Forum
+    location: Dhaka, Bangladesh
+    period: Oct 2023 – Jan 2026
+    highlights:
+      - Participated in collaborative development sprints, peer code reviews, and software engineering workshops.
+      - Contributed to student developer exhibitions, web application prototyping, and community technical knowledge sharing.
+
+projects:
+  - title: AlgoArena
+    subtitle: 3D Real-Time Algorithmic Pathfinding Simulator
+    role: Algorithm & Frontend Engineer (3-person team)
+    period: 2025
+    stack: [React, TypeScript, Three.js, Zustand, Tailwind CSS]
+    links:
+      live: https://algo-arena-sim.vercel.app/
+      repo: https://github.com/xrayian/AlgoArena
+    highlights:
+      - Architected and implemented bidirectional A*, bidirectional BFS, simulated annealing, and multi-goal hill climbing algorithms racing in real time on 3D mazes.
+      - Solved complex multi-goal heuristics and temperature scheduling to guarantee convergence without stalling in local optima.
+      - Engineered state management using Zustand and WebGL rendering with Three.js, maintaining consistent 60fps performance during concurrent search sweeps.
+
+  - title: Nexus Stock AI
+    subtitle: Real-Time Financial Analytics & AI Intelligence Platform
+    role: Scrum Master & Lead Frontend (4-person team)
+    period: 2025
+    stack: [Next.js, React, TypeScript, Google Gemini API, Tailwind CSS]
+    links:
+      live: https://nexus-stock-ai.vercel.app/dashboard
+      repo: https://github.com/ninja-bean/fintech-ai-swe-proj-next-js
+    highlights:
+      - Led agile sprint planning, daily standups, task delegation, and pull request reviews as Scrum Master for a 4-engineer team.
+      - Engineered a modular Next.js dashboard integrating streaming financial market indicators with generative AI summaries via Google Gemini.
+      - Designed defensive client-side caching and fallback mechanisms to handle financial API rate limits and network variance.
+
+  - title: AquaSweep
+    subtitle: Autonomous Aquaculture Telemetry & IoT Web Platform
+    role: Full-Stack & Embedded Co-Developer
+    period: 2024
+    award: 3rd Runner-Up, UIU CSE Project Show
+    stack: [ESP32, C++, MQTT, Node.js, WebSockets, HTML/CSS]
+    links:
+      repo: https://github.com/ninja-bean/AquaSweep
+    highlights:
+      - Engineered an end-to-end IoT pipeline collecting real-time water quality telemetry from physical sensors via ESP32 microcontrollers.
+      - Implemented low-latency telemetry streaming over MQTT protocol to an operational web dashboard for live monitoring and motor dispatch.
+      - Recognized as 3rd Runner-Up out of competing university engineering projects for system reliability and end-to-end integration.
+
+  - title: NextNest
+    subtitle: Enterprise Real Estate & Property Management Engine
+    role: Lead Developer
+    period: 2024
+    stack: [Java, MySQL, JDBC, Java Swing, OOP Architecture]
+    links:
+      repo: https://github.com/ninja-bean
+    highlights:
+      - Designed a robust relational database schema with ACID-compliant transactions managing properties, tenant histories, and payment records.
+      - Implemented a multi-tier architectural pattern (DAO, Service, Controller) to ensure strict separation of concerns and maintainable code.
+      - Optimized SQL queries and relational indexing to minimize response latency during high-volume record queries.
+
+  - title: GovConnect (DhakaGrid)
+    subtitle: Civic Incident Reporting & Emergency Management Platform
+    role: Full-Stack Developer
+    period: 2024
+    stack: [PHP, MySQL, Next.js (in-progress), TypeScript]
+    links:
+      repo: https://github.com/ninja-bean/Gov_Connect-DhakaGird-
+    highlights:
+      - Built the complete initial civic management platform in PHP/MySQL featuring incident ticketing, geographical tracking, and department dispatch.
+      - Currently leading an independent full-stack modernization rearchitecting the platform into Next.js App Router and TypeScript.
+
+education:
+  - degree: Bachelor of Science in Computer Science & Engineering (B.Sc. in CSE)
+    institution: United International University (UIU)
+    location: Dhaka, Bangladesh
+    period: 2022 – Present
+    coursework:
+      - Data Structures & Algorithms
+      - Object-Oriented Programming (Java / C++)
+      - Database Management Systems (SQL / Relational Design)
+      - Software Engineering & Architecture
+      - Microprocessors & Microcontrollers
+      - Operating Systems & Computer Networks
+
+certifications_honors:
+  - title: Agile Project Management Certificate
+    issuer: HP LIFE eLearning
+    date: May 2026
+    verification: https://www.life-global.org/certificate/ad9340ec-597d-4fe6-aefa-2aba6d14a017
+    summary: Certified competency in Scrum methodologies, sprint planning, backlog grooming, and velocity optimization.
+
+  - title: Data Science & Analytics Certificate
+    issuer: HP LIFE eLearning
+    date: May 2026
+    verification: https://www.life-global.org/certificate/0b1d3e49-91ab-4dcc-a26d-05802eb87ce4
+    summary: Foundation in exploratory data analysis, statistical decision modeling, and predictive interpretation.
+
+  - title: 5-Star Java Problem Solving Badge
+    issuer: HackerRank
+    date: Verified Rank
+    verification: https://www.hackerrank.com/profile/malam2330344
+    summary: Top-tier badge demonstrating advanced algorithm design, dynamic programming, and computational problem solving.
+
+  - title: University Physics Olympiad (UPC 2025)
+    issuer: UIU Physics Competition
+    date: 2025
+    verification: https://github.com/xrayian/UPC2025_951B
+    summary: Official accomplishment award for high-difficulty physical problem solving and analytical mechanics.
+
+  - title: 3rd Runner-Up Award (CSE Project Show)
+    issuer: United International University
+    date: 2024
+    summary: Awarded for AquaSweep IoT hardware-software telemetry platform out of competitive project cohort.

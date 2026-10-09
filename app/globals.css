@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #000000;
+  --paper: #F5F5F0;
+  --white: #FFFFFF;
+  --red: #E10600;
+  --blue: #0033A0;
+  --yellow: #FFC700;
+  --grey: #5C5C58;
+}
+
+.dark {
+  --ink: #F5F5F0;
+  --paper: #28282B; /* Signature Bauhaus Matte Black */
+  --white: #1E1E21; /* Deep matte contrast surface */
+  --grey: #9C9C96;
+  /* Primaries remain identical in dark mode per Section 3.1 */
+  --red: #E10600;
+  --blue: #0033A0;
+  --yellow: #FFC700;
+}
+
+[data-mono="true"] {
+  --red: #000000;
+  --blue: #5C5C58;
+  --yellow: #E0E0DC;
+}
+
+.dark[data-mono="true"] {
+  --red: #F5F5F0;
+  --blue: #9C9C96;
+  --yellow: #333333;
+}
+
+/* Strict Bauhaus Geometry: 0 border radius on UI elements */
+*, *::before, *::after {
+  border-radius: 0 !important;
+}
+
+/* Allow explicit full circles where geometrically intended (primitives, icons) */
+.rounded-full-primitive {
+  border-radius: 9999px !important;
+}
+
+html, body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-plex-sans), system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Focus styles per Section 3.6: 3px --blue outline with 3px offset */
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+/* Selection styles */
+::selection {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+/* Mechanical transition easing per Section 3.5: cubic-bezier(0.7, 0, 0.2, 1) */
+.ease-mechanical {
+  transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+}
